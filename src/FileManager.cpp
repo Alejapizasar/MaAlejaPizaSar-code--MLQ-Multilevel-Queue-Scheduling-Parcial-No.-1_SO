@@ -88,18 +88,20 @@ void FileManager::writeResults(
 
     file << std::fixed << std::setprecision(2);
 
+    file << "Etiqueta;BT;AT;Q;Priority;WT;CT;RT;TAT\n";
+
     for (const Process& p : processes)
     {
-        file << p.getLabel() << ";"
-              << p.getBurstTime() << ";"
-              << p.getArrivalTime() << ";"
-              << p.getQueue() << ";"
-              << p.getPriority() << ";"
-              << p.getWaitingTime() << ";"
-              << p.getCompletionTime() << ";"
-              << p.getResponseTime() << ";"
-              << p.getTurnaroundTime() << "\n";
-    }
+                file << p.getLabel() << ";"
+                    << p.getBurstTime() << ";"
+                    << p.getArrivalTime() << ";"
+                    << p.getQueue() << ";"
+                    << p.getPriority() << ";"
+                    << p.getWaitingTime() << ";"
+                    << p.getCompletionTime() << ";"
+                    << p.getResponseTime() << ";"
+                    << p.getTurnaroundTime() << "\n";
+            }
 
     file << "\n";
     file << "WT promedio: " << wtAverage << "\n";
