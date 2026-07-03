@@ -2,8 +2,8 @@
 
 Simulador de planificación de CPU basado en el algoritmo **MLQ (Multilevel Queue Scheduling)**, desarrollado en **C++17** con Programación Orientada a Objetos, para el Primer Parcial de Sistemas Operativos.
 
-**Autores:** Maria Alejandra · Alejandro Valencia Sandoval
-
+**Autor:** Maria Alejandra Pizarro Sarria 
+**Código:** 2519474-2724 
 ---
 
 ## Descripción
