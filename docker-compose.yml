@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  mlq-scheduler:
+    build: .
+    container_name: mlq_scheduler_container
+    volumes:
+      # Mount input/ and output/ from the host so files placed there
+      # (or produced there) are visible outside the container, without
+      # needing to rebuild the image to test new input files.
+      - ./input:/app/input
+      - ./output:/app/output

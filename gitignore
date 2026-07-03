@@ -1,0 +1,18 @@
+# Build artifacts
+build/
+*.o
+*.obj
+*.exe
+mlq_scheduler
+
+# Output results (optional: comment this out if you want to version-control example outputs)
+output/*.txt
+!output/.gitkeep
+
+# IDE
+.vscode/*
+!.vscode/c_cpp_properties.json
+
+# OS
+.DS_Store
+Thumbs.db
