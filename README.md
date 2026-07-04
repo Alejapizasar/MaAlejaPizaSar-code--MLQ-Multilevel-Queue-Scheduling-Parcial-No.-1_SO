@@ -85,19 +85,19 @@ classDiagram
 
     class Scheduler {
         <<abstract>>
-        #deque~Process*~ readyQueue
-        +addProcess(p Process*)
+        #readyQueue Deque
+        +addProcess(process)
         +hasProcessesReady() bool
-        +dispatchNext(t double)* double
+        +dispatchNext(t) double
     }
 
     class RoundRobinScheduler {
         -double quantum
-        +dispatchNext(t double) double
+        +dispatchNext(t) double
     }
 
     class PriorityScheduler {
-        +dispatchNext(t double) double
+        +dispatchNext(t) double
     }
 
     class MLQScheduler {
@@ -108,13 +108,13 @@ classDiagram
     }
 
     class FileManager {
-        +readProcesses(path) vector~Process~
-        +writeResults(path, ...)
+        +readProcesses(path) VectorProcess
+        +writeResults(path)
     }
 
     class Metrics {
         +calculateAverages(procesos) AverageMetrics
-        +formatReport(...) string
+        +formatReport() string
     }
 
     Scheduler <|-- RoundRobinScheduler
@@ -125,7 +125,6 @@ classDiagram
     FileManager ..> Process
     Metrics ..> Process
 ```
-
 ### Flujo de ejecución
 
 ```mermaid
