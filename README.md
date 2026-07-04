@@ -2,8 +2,8 @@
 
 Simulador de planificación de CPU basado en el algoritmo **MLQ (Multilevel Queue Scheduling)**, desarrollado en **C++17** con Programación Orientada a Objetos, para el Primer Parcial de Sistemas Operativos.
 
-**Autor:** Maria Alejandra Pizarro Sarria 
-**Código:** 2519474-2724 
+**Autora:** Maria Alejandra Pizarro Sarria · **Código:** 2519474-2724
+
 ---
 
 ## Descripción
@@ -130,7 +130,7 @@ classDiagram
 
 ```mermaid
 flowchart TD
-    A[main.cpp: leer archivos .txt de input/] --> B[FileManager: parsear procesos]
+    A["main.cpp: leer archivos .txt de input"] --> B[FileManager: parsear procesos]
     B --> C[MLQScheduler: clasificar en 3 colas]
     C --> D{Cola 1 lista?}
     D -- Si --> E[RR quantum=3]
@@ -145,7 +145,7 @@ flowchart TD
     J -- Si --> K[Saltar reloj]
     K --> D
     J -- No --> L[Metrics: calcular promedios]
-    L --> M[FileManager: escribir output/]
+    L --> M["FileManager: escribir en output"]
 ```
 
 ---
